@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CDAS Design System - Cameroon Diploma Authentication System
+   Inspired by Cameroon's national colors with a modern, professional aesthetic
+   All colors in HSL format
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    /* Core brand colors - Cameroon inspired */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Primary - Deep Forest Green (Cameroon) */
+    --primary: 152 65% 28%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Slate Gray */
+    --secondary: 215 20% 94%;
+    --secondary-foreground: 215 25% 25%;
+
+    /* Muted backgrounds */
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 50%;
+
+    /* Accent - Golden Yellow (Cameroon) */
+    --accent: 45 95% 55%;
+    --accent-foreground: 215 25% 15%;
+
+    /* Semantic colors */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 65% 35%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 215 25% 15%;
+
+    --info: 205 85% 50%;
+    --info-foreground: 0 0% 100%;
+
+    /* UI elements */
+    --border: 215 20% 90%;
+    --input: 215 20% 90%;
+    --ring: 152 65% 28%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(152, 65%, 28%) 0%, hsl(152, 55%, 35%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(45, 95%, 55%) 0%, hsl(40, 90%, 50%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(152, 65%, 28%) 0%, hsl(152, 50%, 22%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(210, 20%, 98%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 15% / 0.08), 0 2px 4px -2px hsl(215 25% 15% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 15% / 0.1), 0 4px 6px -4px hsl(215 25% 15% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(215 25% 15% / 0.1), 0 8px 10px -6px hsl(215 25% 15% / 0.05);
+    --shadow-glow: 0 0 20px hsl(152, 65%, 28%, 0.3);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 25% 25%;
+    --sidebar-primary: 152 65% 28%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 96%;
+    --sidebar-accent-foreground: 215 25% 25%;
+    --sidebar-border: 215 20% 92%;
+    --sidebar-ring: 152 65% 28%;
+
+    /* Chart colors */
+    --chart-1: 152 65% 35%;
+    --chart-2: 45 95% 55%;
+    --chart-3: 0 72% 51%;
+    --chart-4: 205 85% 50%;
+    --chart-5: 280 60% 50%;
+  }
+
+  .dark {
+    --background: 215 30% 10%;
+    --foreground: 210 20% 98%;
+
+    --card: 215 28% 14%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 215 28% 14%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 152 60% 45%;
+    --primary-foreground: 215 30% 10%;
+
+    --secondary: 215 25% 20%;
+    --secondary-foreground: 210 20% 95%;
+
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 45 90% 50%;
+    --accent-foreground: 215 30% 10%;
+
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 55% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 85% 45%;
+    --warning-foreground: 215 30% 10%;
+
+    --info: 205 75% 45%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 215 25% 22%;
+    --input: 215 25% 22%;
+    --ring: 152 60% 45%;
+
+    --sidebar-background: 215 28% 12%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 152 60% 45%;
+    --sidebar-primary-foreground: 215 30% 10%;
+    --sidebar-accent: 215 25% 18%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 215 25% 20%;
+    --sidebar-ring: 152 60% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-lg border border-white/20;
+  }
+
+  /* Stat card styles */
+  .stat-card {
+    @apply relative overflow-hidden rounded-xl p-4 transition-all duration-300;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-md);
+  }
+
+  .stat-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+
+  /* Action button styles */
+  .action-card {
+    @apply flex flex-col items-center justify-center gap-2 rounded-xl p-4 transition-all duration-300;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .action-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  /* Mobile container */
+  .mobile-container {
+    @apply mx-auto max-w-md min-h-screen bg-background;
+  }
+
+  /* Header gradient */
+  .header-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Bottom navigation */
+  .bottom-nav {
+    @apply fixed bottom-0 left-0 right-0 bg-card border-t border-border;
+    box-shadow: 0 -4px 6px -1px hsl(215 25% 15% / 0.05);
+  }
+
+  /* Input focus ring */
+  .input-focus {
+    @apply focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200;
+  }
+
+  /* Badge variants */
+  .badge-success {
+    @apply bg-success/10 text-success border-success/20;
+  }
+
+  .badge-warning {
+    @apply bg-warning/10 text-warning border-warning/20;
+  }
+
+  .badge-destructive {
+    @apply bg-destructive/10 text-destructive border-destructive/20;
+  }
+
+  .badge-info {
+    @apply bg-info/10 text-info border-info/20;
+  }
+}
+
+@layer utilities {
+  /* Animations */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
+  }
+
+  .animate-pulse-soft {
+    animation: pulseSoft 2s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes pulseSoft {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  /* Gradient text */
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  /* Safe area padding for mobile */
+  .safe-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  .safe-top {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+}
