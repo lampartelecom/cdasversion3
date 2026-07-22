@@ -1,58 +1,63 @@
-# Welcome to your  project tutorer
+# CDAS Tutor by MR PYTHON
 
-## Project info
+CDAS Tutor est une application web développée avec une stack moderne pour proposer une interface rapide, claire et facile à utiliser.
 
-**URL**: https://cdasversion3.vercel.app/
+## Description
 
-## How can I edit this code?
+Ce projet est une application réelle destinée à être utilisée en production. Il a été conçu avec **React**, **TypeScript**, **Vite**, **shadcn-ui** et **Tailwind CSS**.
 
-There are several ways of editing your application.
+## Fonctionnalités
 
-**Use Lovable**
+- Interface moderne et responsive.
+- Navigation fluide.
+- Base de code organisée pour faciliter la maintenance.
+- Déploiement sur Vercel.
 
-Simply visit the https://cdasversion3.vercel.app/ and start prompting.
+## Installation
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prérequis
+- Node.js installé.
+- npm installé.
+- Un compte GitHub.
+- Un compte Vercel pour le déploiement.
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Cloner le projet
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone <URL_DU_DEPOT>
+cd <NOM_DU_PROJET>
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Installer les dépendances
 
-# Step 3: Install the necessary dependencies.
-npm i
+```sh
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Lancer le projet en local
+
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Déploiement
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+L’application est déployée sur Vercel.
 
-**Use GitHub Codespaces**
+### Déploiement sur Vercel
+1. Connecter le dépôt GitHub à Vercel.
+2. Importer le projet.
+3. Vérifier les paramètres de build.
+4. Lancer le déploiement.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Paramètres Vite
+Pour un projet Vite, le dossier de sortie doit être :
 
-## What technologies are used for this project?
+```sh
+dist
+```
 
-This project is built with:
+## Technologies utilisées
 
 - Vite
 - TypeScript
@@ -60,14 +65,25 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Structure du projet
 
-Simply open https://cdasversion3.vercel.app/ and click on Share -> Publish.
+```bash
+src/
+public/
+components/
+pages/
+```
 
-## Can I connect a custom domain to my Lovable project?
+## Personnalisation
 
-Yes, you can!
+Tu peux modifier :
+- les composants React,
+- les styles Tailwind,
+- la structure des pages,
+- les données affichées dans l’application.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Accès en ligne
 
-Read more here:https://cdasversion3.vercel.app/
+Application disponible ici :
+
+[https://cdasversion3.vercel.app/](https://cdasversion3.vercel.app/)
